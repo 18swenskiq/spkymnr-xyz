@@ -9,10 +9,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v1
-        with:
-            node-version: 22.3.0
+      - name: Install NPM Globally
+        run: npm install npm@latest -g
       - name: Install Packages
         run: npm install
       - name: Create Distribution Folder
