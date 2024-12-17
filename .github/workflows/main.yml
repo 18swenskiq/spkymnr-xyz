@@ -10,9 +10,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Packages
-        run: npm ci
+        run: npm install
+      #- name: Create Distribution Folder
+      #  run: ng build
       - name: Create Distribution Folder
-        run: ng build
+        run: node /node_modules/@angular/cli/bin/ng.js build
       - name: Publish
         uses: cloudflare/pages-action@v1
         with:
