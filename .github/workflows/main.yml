@@ -9,10 +9,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install NPM Globally
-        run: npm install npm@10.8.2 -g
       - name: Install Packages
-        run: npm install
+        run: npm ci
       - name: Create Distribution Folder
         run: ng build
       - name: Publish
